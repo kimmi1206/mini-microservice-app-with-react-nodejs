@@ -26,3 +26,6 @@ CMD [ "npm", "start" ]
 # docker build -t kimmi1206/moderation .
 # docker build -t kimmi1206/event-bus .
 # docker build -t kimmi1206/client .
+
+# docker tag local-image:tagname new-repo:tagname
+# docker push new-repo:tagname
