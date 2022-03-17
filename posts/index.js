@@ -41,5 +41,6 @@ app.post('/events', (req, res) => {
 });
 
 app.listen(4000, () => {
+  console.log('Posts Server');
   console.log('Listening on 4000');
 });
