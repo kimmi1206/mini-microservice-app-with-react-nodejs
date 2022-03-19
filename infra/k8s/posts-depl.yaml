@@ -1,44 +1,30 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name:  posts-depl
+  name: posts-depl
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: posts
-  replicas: 1
   template:
     metadata:
       labels:
-        app:  posts
+        app: posts
     spec:
-      # initContainers:
-        # Init containers are exactly like regular containers, except:
-          # - Init containers always run to completion.
-          # - Each init container must complete successfully before the next one starts.
       containers:
-      - name:  posts
-        image:  kimmi1206/posts
-        resources:
-          requests:
-            cpu: 100m
-            memory: 100Mi
-          limits:
-            cpu: 100m
-            memory: 100Mi
-      restartPolicy: Always
+        - name: posts
+          image: cygnetops/posts-82
 ---
-# Cluster IP
 apiVersion: v1
 kind: Service
 metadata:
   name: posts-clusterip-srv
 spec:
-  # type: ClusterIP     # There is no need to specify clusterip, it is the default value
   selector:
     app: posts
   ports:
-  - name: posts
-    protocol: TCP
-    port: 4000
-    targetPort: 4000
+    - name: posts
+      protocol: TCP
+      port: 4000
+      targetPort: 4000

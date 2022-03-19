@@ -7,10 +7,7 @@ spec:
   selector:
     app: posts
   ports:
-  - name: posts
-    protocol: TCP
-    port: 4000
-    targetPort: 4000
-    # If you set the `spec.type` field to `NodePort` and you want a specific port number,
-    # you can specify a value in the `spec.ports[*].nodePort` field.
-    # nodePort: 
+    - name: posts
+      protocol: TCP
+      port: 4000
+      targetPort: 4000
