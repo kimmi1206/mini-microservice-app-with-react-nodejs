@@ -15,6 +15,7 @@ spec:
       containers:
         - name: moderation
           image: cygnetops/moderation-84
+          imagePullPolicy: Never
 ---
 apiVersion: v1
 kind: Service

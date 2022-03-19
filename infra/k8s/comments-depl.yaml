@@ -15,6 +15,7 @@ spec:
       containers:
         - name: comments
           image: cygnetops/comments-84
+          imagePullPolicy: Never
 ---
 apiVersion: v1
 kind: Service

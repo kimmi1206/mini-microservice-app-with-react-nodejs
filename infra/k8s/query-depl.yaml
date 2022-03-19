@@ -15,6 +15,7 @@ spec:
       containers:
         - name: query
           image: cygnetops/query-84
+          imagePullPolicy: Never
 ---
 apiVersion: v1
 kind: Service
