@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: query
-          image: cygnetops/query-84
+          image: kimmi1206/query
           imagePullPolicy: Never
 ---
 apiVersion: v1
