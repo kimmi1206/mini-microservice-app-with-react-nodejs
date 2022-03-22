@@ -24,6 +24,7 @@ app.post("/events", (req, res) => {
   axios.post("http://moderation-srv:4003/events", event).catch((err) => {
     console.log(err.message);
   });
+  console.log("Received Event");
   res.send({ status: "OK" });
 });
 
