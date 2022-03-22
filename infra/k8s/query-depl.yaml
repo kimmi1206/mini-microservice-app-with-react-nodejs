@@ -15,7 +15,7 @@ spec:
       containers:
         - name: query
           image: kimmi1206/query
-          imagePullPolicy: Never
+          #imagePullPolicy: Never
 ---
 apiVersion: v1
 kind: Service

@@ -15,7 +15,7 @@ spec:
       containers:
         - name: posts
           image: kimmi1206/posts
-          imagePullPolicy: Never
+          #imagePullPolicy: Never
 ---
 apiVersion: v1
 kind: Service

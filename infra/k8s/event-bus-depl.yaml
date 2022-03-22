@@ -15,7 +15,7 @@ spec:
       containers:
         - name: event-bus
           image: kimmi1206/event-bus
-          imagePullPolicy: Never
+          #imagePullPolicy: Never
 ---
 apiVersion: v1
 kind: Service
